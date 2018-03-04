@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Toy Robot Simulator</title>
+  <script src="https://unpkg.com/vue"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css"></link>
+</head>
+<body>
+
+  <button>Place X,Y,F</button>
+  <button>Move</button>
+  <button>Left</button>
+  <button>Right</button>
+  <button>Report</button>
+
+
+<div id="app">
+  <textarea id="commandInput" v-model="commandInput"></textarea>
+  <button id="runCommand" v-on:click="runCommand">Run</button>
+</div>
+
+  <script>
+
+    //var commandArray = document.getElementById('commandArea').value.split('\n');
+    //console.log(commandArray);
+
+    var app = new Vue({
+      el: '#app',
+      data: {
+          commandInput: ''
+      },
+      methods: {
+          runCommand(){
+            var commandArray = commandInput.value.split('\n');
+            console.log(commandArray)
+          }
+      }
+    })
+
+    /**
+     * Map for turning the robot
+     * @type {{direction: {value: string, left: string, right: string}}}
+     */
+    var directionMap = {
+      north: {
+        value: 'north',
+        left: 'west',
+        right: 'east'
+      },
+      east: {
+        value: 'east',
+        left: 'north',
+        right: 'south'
+      },
+      south: {
+        value: 'south',
+        left: 'east',
+        right: 'west'
+      },
+      west: {
+        value: 'west',
+        left: 'south',
+        right: 'north'
+      }
+    };
+
+
+  </script>
+
+</body>
+</html>
