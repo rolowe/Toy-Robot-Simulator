@@ -9,6 +9,12 @@ body {
 	font-family: 'Quicksand', sans-serif;
 }
 
+textarea {
+	padding: 10px;
+	width: 400px;
+	height: 150px;
+}
+
 .test {
 	margin: 20px;
 }

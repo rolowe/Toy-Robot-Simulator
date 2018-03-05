@@ -7,77 +7,36 @@
 </head>
 <body>
 
-<div id="app">
-  <textarea id="commandInput" v-model="commandInput"></textarea>
-  <button id="runCommand" v-on:click="runCommand">Run</button>
-</div>
+  <h1>Toy Robot Simulator</h1>
 
-<div class="test">
-  PLACE 0,0,NORTH<br>
-  MOVE<br>
-  REPORT
-</div>
+  <div id="app">
+    <textarea id="commandInput" v-model="commandInput"></textarea>
+    <button id="runCommand" v-on:click="runCommand">Run</button>
+  </div>
 
-<div class="test">
-  PLACE 0,0,NORTH<br>
-  RIGHT<br>
-  MOVE<br>
-  MOVE<br>
-  REPORT
-</div>
+  <div class="test">
+    PLACE 0,0,NORTH<br>
+    MOVE<br>
+    REPORT
+  </div>
 
-<div class="test">
-  PLACE 3,3,WEST<br>
-  MOVE<br>
-  LEFT<br>
-  MOVE<br>
-  REPORT
-</div>
+  <div class="test">
+    PLACE 0,0,NORTH<br>
+    RIGHT<br>
+    MOVE<br>
+    MOVE<br>
+    REPORT
+  </div>
 
-  <script>
-
-    var app = new Vue({
-      el: '#app',
-      data: {
-          commandInput: ''
-      },
-      methods: {
-          runCommand(){
-            var commandArray = commandInput.value.split('\n');
-            console.log(commandArray)
-          }
-      }
-    })
-
-    /**
-     * Map for turning the robot
-     * @type {{direction: {value: string, left: string, right: string}}}
-     */
-    var directionMap = {
-      north: {
-        value: 'north',
-        left: 'west',
-        right: 'east'
-      },
-      east: {
-        value: 'east',
-        left: 'north',
-        right: 'south'
-      },
-      south: {
-        value: 'south',
-        left: 'east',
-        right: 'west'
-      },
-      west: {
-        value: 'west',
-        left: 'south',
-        right: 'north'
-      }
-    };
+  <div class="test">
+    PLACE 3,3,WEST<br>
+    MOVE<br>
+    LEFT<br>
+    MOVE<br>
+    REPORT
+  </div>
 
 
-  </script>
-
+  <script src="assets/js/robot.js"></script>
 </body>
 </html>
