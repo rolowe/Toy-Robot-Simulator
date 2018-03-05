@@ -17,5 +17,6 @@
   },
   "homepage": "https://github.com/rolowe/Toy-Robot-Simulator#readme",
   "dependencies": {
+    "vue-tabs-component": "^1.4.0"
   }
 }

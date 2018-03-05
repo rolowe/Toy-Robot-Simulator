@@ -7,22 +7,34 @@
 </head>
 <body>
 
-  <button>Place X,Y,F</button>
-  <button>Move</button>
-  <button>Left</button>
-  <button>Right</button>
-  <button>Report</button>
-
-
 <div id="app">
   <textarea id="commandInput" v-model="commandInput"></textarea>
   <button id="runCommand" v-on:click="runCommand">Run</button>
 </div>
 
-  <script>
+<div class="test">
+  PLACE 0,0,NORTH<br>
+  MOVE<br>
+  REPORT
+</div>
 
-    //var commandArray = document.getElementById('commandArea').value.split('\n');
-    //console.log(commandArray);
+<div class="test">
+  PLACE 0,0,NORTH<br>
+  RIGHT<br>
+  MOVE<br>
+  MOVE<br>
+  REPORT
+</div>
+
+<div class="test">
+  PLACE 3,3,WEST<br>
+  MOVE<br>
+  LEFT<br>
+  MOVE<br>
+  REPORT
+</div>
+
+  <script>
 
     var app = new Vue({
       el: '#app',
