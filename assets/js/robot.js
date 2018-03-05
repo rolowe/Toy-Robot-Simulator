@@ -1,3 +1,4 @@
+    
     var app = new Vue({
       el: '#app',
       data: {
@@ -9,8 +10,9 @@
 
             //Place array
             var placeArray = commandArray[0].split(/[ ,]+/);
+            reportRobot(ToyRobot);
             placeRobot(placeArray);
-            //console.log(ToyRobot);
+            
           }
       }
     });
@@ -59,11 +61,18 @@
 
     
 
-    
+    function reportRobot(ToyRobot) {
 
+        var app2 = new Vue({
+          el: '#report',
+          data: {
+            report: 'Hello Vue!'
+          }
+        })
 
-    
-    //console.log(tableSize.x);
+    }  
+
+  
 
 
 
