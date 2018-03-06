@@ -7,10 +7,12 @@
 </head>
 <body>
 
+  <img src="assets/img/toy-robot.jpg" alt="Toy Robot Simulator" title="Toy Robot Simulator">
+
   <h1>Toy Robot Simulator</h1>
 
   <div id="app">
-    <textarea id="commandInput" v-model="commandInput"></textarea>
+    <textarea id="commandInput" v-model="commandInput" placeholder="Enter commands here..."></textarea>
     <button id="runCommand" v-on:click="runCommand">Run</button>
   </div>
 
@@ -20,28 +22,39 @@
   </div>
 
 
+  <h2>Example Test Data</h2>
 
-  <div class="test">
-    PLACE 0,0,NORTH<br>
-    MOVE<br>
-    REPORT
-  </div>
+  <ul class="test-data">
+    <li class="test">
+      PLACE 0,0,NORTH<br>
+      MOVE<br>
+      REPORT
+    </li>
 
-  <div class="test">
-    PLACE 0,0,NORTH<br>
-    RIGHT<br>
-    MOVE<br>
-    MOVE<br>
-    REPORT
-  </div>
+    <li class="test">
+      PLACE 0,0,NORTH<br>
+      RIGHT<br>
+      MOVE<br>
+      MOVE<br>
+      REPORT
+    </li>
 
-  <div class="test">
-    PLACE 3,3,WEST<br>
-    MOVE<br>
-    LEFT<br>
-    MOVE<br>
-    REPORT
-  </div>
+    <li class="test">
+      PLACE 3,3,WEST<br>
+      MOVE<br>
+      LEFT<br>
+      MOVE<br>
+      REPORT
+    </li>
+
+    <li class="test">
+      PLACE 2,1,EAST<br>
+      MOVE<br>
+      MOVE<br>
+      RIGHT<br>
+      REPORT
+    </li>
+  </ul>
 
 
   <script src="assets/js/robot.js"></script>

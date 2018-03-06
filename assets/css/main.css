@@ -7,14 +7,61 @@
 
 body {
 	font-family: 'Quicksand', sans-serif;
+	font-size: 16px;
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+img {
+	display: block;
+	margin: 20px auto;
+	max-width: 80px;
 }
 
 textarea {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 16px;
 	padding: 10px;
-	width: 400px;
-	height: 150px;
+	width: 300px;
+	height: 100px;
+	margin: 20px auto;
+	display: block;
+	background: #efefef;
+}
+
+button {
+	display: block;
+	margin: 20px auto;
+	padding: 10px 15px;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 16px;
+	background: #ef4723;
+	color: #FFF;
+	border: none;
+}
+
+#report {
+	border: solid 1px #CCC;
+	padding: 20px;
+	width: 300px;
+	text-align: center;
+	margin: 20px auto 40px;
+	background: #c2e5e7;
+}
+
+.test-data {
+	display: block;
+	list-style: none;
+	max-width: 800px;
+	margin: auto 40px;
 }
 
 .test {
 	margin: 20px;
+	float: left;
+	border: solid 1px #000;
+	padding: 15px;
+	min-height: 120px;
 }
