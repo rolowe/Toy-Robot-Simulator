@@ -9,18 +9,18 @@
             commandArray = commandInput.value.split('\n');
             
             commandArray.forEach(function(commandLine) {
-                if (commandLine.includes('PLACE')) {
-                  placeRobot(commandLine);
-                }
-                if (commandLine == 'MOVE') {
-                  moveRobot(ToyRobot);
-                }
-                if (commandLine == 'LEFT' || commandLine == 'RIGHT') {
-                  robotDirection(ToyRobot, commandLine)
-                }
-                if (commandLine == 'REPORT') {
-                  reportRobot(ToyRobot);
-                }
+              if (commandLine.includes('PLACE')) {
+                placeRobot(commandLine);
+              }
+              if (commandLine == 'MOVE') {
+                moveRobot(ToyRobot);
+              }
+              if (commandLine == 'LEFT' || commandLine == 'RIGHT') {
+                robotDirection(ToyRobot, commandLine)
+              }
+              if (commandLine == 'REPORT') {
+                reportRobot(ToyRobot);
+              }
             });
           }
       }
@@ -155,23 +155,18 @@
     **** Report on robot position  ***
     *********************************/
     function reportRobot(ToyRobot) {
-        // Terminate if Robot is not placed
-        if (ToyRobot.placed == false) {
-          return false;
-        }
+      // Terminate if Robot is not placed
+      if (ToyRobot.placed == false) {
+        return false;
+      }
 
-        endXPos = ToyRobot.position.x;
-        endYPos = ToyRobot.position.y;
-        endDirection = ToyRobot.direction;
+      endXPos = ToyRobot.position.x;
+      endYPos = ToyRobot.position.y;
+      endDirection = ToyRobot.direction;
 
-        console.log(ToyRobot);
+      //console.log(ToyRobot);
 
-        var app2 = new Vue({
-          el: '#report',
-          data: {
-            report: 'Output: ' + endXPos + ',' + endYPos + ',' + endDirection
-          }
-        })
+      document.getElementById("report").innerHTML='Output: ' + endXPos + ',' + endYPos + ',' + endDirection;
     }  
 
 
